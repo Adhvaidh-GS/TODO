@@ -1,0 +1,184 @@
+@import url('http://fonts.cdnfonts.com/css/anurati');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+/* font-family: 'Anurati', sans-serif; */
+/* font-family: 'Poppins', sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    letter-spacing: 20px;
+    font-size: 1.5rem;
+    color: black;
+}
+
+body {
+    background-image: linear-gradient(120deg, #f6d465, #fda085);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+
+
+header, form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input {
+    border-radius: 10px 0 0 10px;
+}
+
+input:focus {
+    outline: none;
+}
+
+form input, form button {
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+    background: white; 
+    box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+}
+
+form button {
+    color: #d88771;
+    cursor: pointer;
+    border-radius: 0 10px 10px 0;
+    transition: 0.3s all ease-in;
+}
+
+form button:hover {
+    background: #d88771;
+    color: white;
+}
+
+form input:hover {
+    box-shadow: 0 2px 8px 1px rgb(64 60 67 / 24%);
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    min-width: 40%;
+    list-style: none;
+}
+
+.todo {
+    margin: 0.5rem;
+    background: white;
+    border-radius: 3px;
+    color: black;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+.todo li {
+    flex: 1;
+    padding-left: 10px;
+}
+
+.trash-btn, .complete-btn {
+    background: #ff6f47;
+    border: none;
+    color: white;
+    padding: 15px;
+    box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+    transition: 250ms;
+}
+
+.trash-btn {
+    border-radius: 0 3px 3px 0;
+}
+
+.trash-btn:hover, .complete-btn:hover {
+    transform: scale(1.1);
+}
+
+button {
+    cursor: pointer;
+}
+
+.todo-item {
+    padding: 0rem 0.5rem;
+}
+
+
+
+@media only screen and (max-width: 450px) {
+    header {
+        font-size: 1.1rem;
+        letter-spacing: 15px;
+    }
+
+    .todo-list {
+        min-width: 70%;
+    }
+}
+
+.fa-trash, .fa-check {
+    pointer-events: none;
+} 
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+.fall {
+    transform: translateX(25rem) ;
+    opacity: 0;
+} 
+
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+select {
+    color: #ff6f47;
+    width: 10rem;
+    cursor: pointer;
+    padding: .5rem;
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    background: #ff6f47;
+    top: 0;
+    right: 0;
+    padding: .3rem;
+    pointer-events:none ;
+    transition: all .3s ease;
+}
+
+.select:hover::after {
+    background: white;
+    color: #ff6f47;
+}
+
